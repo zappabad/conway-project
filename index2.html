@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topology Builder Minigame</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- jQuery from CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Our topology game logic -->
+  <script src="js/topologyGame.js"></script>
+</head>
+<body>
+  <h1>Topology Builder Minigame</h1>
+  <!-- Game settings -->
+  <div id="topology-game-settings">
+    <label for="topology-difficulty">Select Difficulty:</label>
+    <select id="topology-difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <button id="start-topology-game">Start Game</button>
+  </div>
+  
+  <!-- Container where the game will be rendered -->
+  <div id="topology-game-container"></div>
+  
+  <!-- Property statuses for the topology axioms -->
+  <div id="topology-game-info">
+    <p id="top-empty" class="property-status pending">Empty set included</p>
+    <p id="top-full" class="property-status pending">Full set included</p>
+    <p id="top-union" class="property-status pending">Closed under unions</p>
+    <p id="top-intersection" class="property-status pending">Closed under intersections</p>
+  </div>
+  
+  <script>
+    // Start the topology game when the button is clicked.
+    $("#start-topology-game").on("click", function(){
+       var difficulty = $("#topology-difficulty").val();
+       TopologyGame.initGame(difficulty, "topology-game-container");
+    });
+  </script>
+</body>
+</html>

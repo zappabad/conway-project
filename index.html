@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Finite Group Builder Minigame</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- jQuery from CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Our game logic -->
+  <script src="js/groupGame.js"></script>
+</head>
+<body>
+  <h1>Finite Group Builder Minigame</h1>
+  <!-- Game settings -->
+  <div id="game-settings">
+    <label for="difficulty">Select Difficulty:</label>
+    <select id="difficulty">
+      <option value="easy">Easy (4 elements, mostly filled)</option>
+      <option value="medium">Medium (5 elements, partially filled)</option>
+      <option value="hard">Hard (6 elements, few prefilled)</option>
+    </select>
+    <button id="start-game">Start Game</button>
+  </div>
+  
+  <!-- Container for the game (fixed dimensions) -->
+  <div id="game-container"></div>
+  
+  <!-- Group property statuses -->
+  <div id="game-info">
+    <p id="commutativity" class="property-status pending">Commutativity</p>
+    <p id="closedness" class="property-status pending">Closedness</p>
+    <p id="identity" class="property-status pending">Identity</p>
+    <p id="inverse" class="property-status pending">Inverse</p>
+    <p id="associativity" class="property-status pending">Associativity</p>
+  </div>
+  
+  <script>
+    // Start the game when the button is clicked.
+    $("#start-game").on("click", function() {
+      var difficulty = $("#difficulty").val();
+      // Call our API to initialize the game in the container with id "game-container"
+      GroupGame.initGame(difficulty, "game-container");
+    });
+  </script>
+</body>
+</html>

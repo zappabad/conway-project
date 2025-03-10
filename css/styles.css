@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Etruscan';
+    src: url('../fonts/etruscan.ttf') format('truetype');
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Game container: fixed maximum dimensions */
+  #game-container {
+    max-width: 400px;
+    max-height: 700px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Specific style for our group table */
+  .group-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-family: 'Etruscan', Arial, sans-serif;
+  }
+  
+  .group-table th,
+  .group-table td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+  
+  /* Header cells (drag sources) */
+  .header-cell {
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-size: 32px;
+  }
+  
+  /* Data cells (game cells) */
+  .game-cell {
+    font-size: 32px;
+  }
+  
+  /* Style for cells that have a value (filled by user or prefilled) */
+  .cell-filled {
+    background-color: #f0f0f0;
+  }
+  
+  /* When a cell (or group of cells) is in error, highlight them red */
+  .cell-error {
+    background-color: #ffcccc !important;
+  }
+  
+  /* Styling for the property status text */
+  .property-status {
+    font-weight: bold;
+    margin: 5px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Colors for property status: valid (green), pending (black), invalid (red) */
+  .property-status.valid {
+    color: green;
+  }
+  
+  .property-status.pending {
+    color: black;
+  }
+  
+  .property-status.invalid {
+    color: red;
+  }
+  
+  /* Visual indicator for a header in sticky (persistent) mode */
+  .sticky-active {
+    border: 2px dashed #666;
+  }
+
+  
+/* Palette for dragging symbols */
+#topology-palette {
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  .topology-palette-item {
+    display: inline-block;
+    border: 1px solid #333;
+    margin: 2px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Etruscan', Arial, sans-serif;
+    cursor: move;
+  }
+  
+  /* Bucket container styling */
+  .bucket-container {
+    border: 1px solid #ccc;
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    vertical-align: top;
+    min-width: 50px;
+  }
+  .bucket-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  /* Each slot represents an element of the subset */
+  .slot {
+    border: 1px dashed #aaa;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 2px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 32px;
+    font-family: 'Etruscan', Arial, sans-serif;
+    vertical-align: middle;
+  }
+  .slot-filled {
+    background-color: #f0f0f0;
+  }
+  .slot-error {
+    background-color: #ffcccc !important;
+  }
