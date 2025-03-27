@@ -1,0 +1,12 @@
+{
+  "deck": [
+    { "color": "red", "type": "color" },
+    { "color": "blue", "type": "color" },
+    { "color": "green", "type": "color" },
+    { "number": 2, "type": "number" },
+    { "number": 3, "type": "number" },
+    { "number": 5, "type": "number" },
+    { "number": 1, "type": "number" },
+    { "number": 4, "type": "number" }
+  ]
+}

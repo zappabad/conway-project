@@ -1,16 +1,15 @@
 {
-    "deck": [
-      { "type": "color", "color": "red" },
-      { "type": "color", "color": "blue" },
-      { "type": "color", "color": "green" },
-      { "type": "color", "color": "yellow" },
-  
-      { "type": "number", "number": "2" },
-      { "type": "number", "number": "6" },
-      { "type": "number", "number": "10" },
-      { "type": "number", "number": "J" },
-      { "type": "number", "number": "Q" },
-      { "type": "number", "number": "K" },
-      { "type": "number", "number": "Ace" }
-    ]
-  }
+  "deck": [
+    { "type": "color", "color": "red" },
+    { "type": "color", "color": "blue" },
+    { "type": "color", "color": "green" },
+    { "type": "color", "color": "yellow" },
+    { "type": "number", "number": "2" },
+    { "type": "number", "number": "5" },
+    { "type": "number", "number": "8" },
+    { "type": "number", "number": "J" },
+    { "type": "number", "number": "Q" },
+    { "type": "number", "number": "K" },
+    { "type": "number", "number": "Ace" }
+  ]
+}

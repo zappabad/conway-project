@@ -1,43 +1,77 @@
 body {
-    font-family: sans-serif;
-    background: #f0f0f0;
-    margin: 0;
-    padding: 1em;
-  }
-  
-  #game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-  }
-  
-  #problem-tree, #hand, #stack, #memory {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    padding: 10px;
-    background: #fff;
-    border: 1px solid #ccc;
-    min-height: 50px;
-    max-width: 80vw;
-  }
-  
-  .card, .node {
-    padding: 0.5em 1em;
-    background: lightgray;
-    border: 1px solid #333;
-    border-radius: 5px;
-    cursor: grab;
-  }
-  
-  .memory {
-    background: lightyellow;
-  }
-  
-  button {
-    padding: 0.5em 1.5em;
-    font-size: 1em;
-    cursor: pointer;
-  }
-  
+  font-family: sans-serif;
+  background: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+#game {
+  display: grid;
+  grid-template-areas:
+    "memory memory"
+    "problem hand"
+    "stack stack"
+    "button button";
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+#memory { grid-area: memory; }
+#problem-tree { grid-area: problem; }
+#hand { grid-area: hand; }
+#stack { grid-area: stack; }
+#ship-it { grid-area: button; padding: 10px; font-size: 1.2em; }
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+  background: #222;
+  text-align: center;
+  min-width: 40px;
+}
+
+.card.color-red { background: crimson; }
+.card.color-blue { background: dodgerblue; }
+.card.color-green { background: seagreen; }
+.card.color-yellow { background: gold; color: black; }
+
+.tree-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.tree-node {
+  margin: 5px auto;
+}
+
+.tree-children {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#stack {
+  min-height: 60px;
+  border: 2px dashed #888;
+  padding: 10px;
+}
+#stack:hover {
+  border-color: white;
+}
+
+#memory {
+  border-bottom: 2px solid #444;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+#memory:hover {
+  border-color: white;
+}

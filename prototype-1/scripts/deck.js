@@ -1,25 +1,23 @@
-import { shuffleArray, loadJSON } from './utils.js';
-
 export class Deck {
   constructor(cards) {
-    this.cards = shuffleArray(cards.slice());
-    this.memory = [];
+    this.original = [...cards];
+    this.cards = [...cards];
   }
 
-  drawHand(size = 8) {
-    return this.cards.splice(0, size);
+  draw(n = 8) {
+    const drawn = [];
+    for (let i = 0; i < n; i++) {
+      if (this.cards.length === 0) this.shuffle();
+      drawn.push(this.cards.pop());
+    }
+    return drawn;
   }
 
-  addToMemory(card) {
-    this.memory.push(card);
+  shuffle() {
+    this.cards = [...this.original];
+    for (let i = this.cards.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];
+    }
   }
-
-  drawMemory() {
-    return this.memory;
-  }
-}
-
-export async function loadDeck(path) {
-  const data = await loadJSON(path);
-  return new Deck(data.deck);
 }

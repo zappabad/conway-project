@@ -1,0 +1,28 @@
+{
+  "problems": [
+    {
+      "root": {
+        "id": "root",
+        "color": "red",
+        "number": 5,
+        "loot": 2,
+        "children": [
+          {
+            "id": "node1",
+            "color": "blue",
+            "number": 2,
+            "loot": 1,
+            "children": []
+          },
+          {
+            "id": "node2",
+            "color": "green",
+            "number": 3,
+            "loot": 1,
+            "children": []
+          }
+        ]
+      }
+    }
+  ]
+}

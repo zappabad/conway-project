@@ -1,13 +1,44 @@
 {
-    "problems": [
-      {
-        "id": "problem1",
-        "nodes": [
-          { "id": "n1", "value": "root", "color": "blue", "number": "8", "children": ["n2", "n3"] },
-          { "id": "n2", "value": "child1", "color": "red", "number": "J", "children": ["n4"] },
-          { "id": "n3", "value": "child2", "color": "green", "number": "5", "children": [] },
-          { "id": "n4", "value": "leaf1", "color": "yellow", "number": "Ace", "children": [] }
+  "problems": [
+    {
+      "id": "pyramid_1",
+      "root": {
+        "id": "n1",
+        "color": "red",
+        "number": "K",
+        "loot": 10,
+        "children": [
+          {
+            "id": "n2",
+            "color": "blue",
+            "number": "5",
+            "loot": 5,
+            "children": [
+              {
+                "id": "n4",
+                "color": "green",
+                "number": "2",
+                "loot": 2,
+                "children": []
+              },
+              {
+                "id": "n5",
+                "color": "yellow",
+                "number": "J",
+                "loot": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "color": "green",
+            "number": "9",
+            "loot": 4,
+            "children": []
+          }
         ]
       }
-    ]
-  }
+    }
+  ]
+}
