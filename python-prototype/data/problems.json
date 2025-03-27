@@ -1,36 +1,18 @@
 {
-    "problems": [
+    "card": { "color": "red", "number": 5, "edition": "first", "stamp": "stamp1", "zone": "problem" },
+    "children": [
       {
-        "root": {
-          "id": "root",
-          "color": "red",
-          "number": 7,
-          "loot": 3,
-          "children": [
-            {
-              "id": "left-1",
-              "color": "blue",
-              "number": 4,
-              "loot": 2,
-              "children": []
-            },
-            {
-              "id": "right-1",
-              "color": "green",
-              "number": 5,
-              "loot": 2,
-              "children": [
-                {
-                  "id": "right-2",
-                  "color": "red",
-                  "number": 3,
-                  "loot": 1,
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
+        "card": { "color": "blue", "number": 2, "edition": "first", "stamp": "stamp2", "zone": "problem" },
+        "children": []
+      },
+      {
+        "card": { "color": "green", "number": 9, "edition": "first", "stamp": "stamp3", "zone": "problem" },
+        "children": [
+          {
+            "card": { "color": "red", "number": 4, "edition": "first", "stamp": "stamp4", "zone": "problem" },
+            "children": []
+          }
+        ]
       }
     ]
   }
