@@ -1,0 +1,13 @@
+{
+    "problems": [
+      {
+        "id": "problem1",
+        "nodes": [
+          { "id": "n1", "value": "root", "color": "blue", "number": "8", "children": ["n2", "n3"] },
+          { "id": "n2", "value": "child1", "color": "red", "number": "J", "children": ["n4"] },
+          { "id": "n3", "value": "child2", "color": "green", "number": "5", "children": [] },
+          { "id": "n4", "value": "leaf1", "color": "yellow", "number": "Ace", "children": [] }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,43 @@
+body {
+    font-family: sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 1em;
+  }
+  
+  #game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  #problem-tree, #hand, #stack, #memory {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    min-height: 50px;
+    max-width: 80vw;
+  }
+  
+  .card, .node {
+    padding: 0.5em 1em;
+    background: lightgray;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: grab;
+  }
+  
+  .memory {
+    background: lightyellow;
+  }
+  
+  button {
+    padding: 0.5em 1.5em;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
