@@ -27,6 +27,7 @@ In this version of the game, I see the puzzles as being more interesting and eac
 I just thought about doing **both.** We could have a puzzle-based "turn-based" strategy phase, and then a real-time component with a small gameplay loop that keeps it interesting. This is giving me a "tower defense" vibe and honestly looks like a very interesting place to explore.
 
 Some themes to attack this:
+
 * Math student trying to graduate.
 * Math researcher trying to discover something big.
 * Something way more abstract like you're an alien and you're discovering math
@@ -47,11 +48,12 @@ Looks fun. Now I need to know what is the actual small thing that is fun to do.
 ### Random thoughts
 
 * I just thought about problems as being **cards.** A card has multiple colors (branches of math it gives) and you're presented with the boss as being a bigger problem (a tree with many branches and different colors) and you have to use your cards to get to the root of it.
-* I thought about playing cards in a specific sequence and it "attacking" the leafs once it all resolves. I imagine a bar of liquid that fills up the more cards you play and eventually resolves itself, draining the liquid and attacking the leafs. You can resolve, for instance, an "infinity geometry points" node at the end to, after you're unlocked every other requirement from a node (say that has 3 colors), the geometry blue attacks all nodes and unlocks a deeper node all at once with a single card.
+* I thought about playing cards in a specific sequence and it "attacking" the leafs once it all resolves. I imagine a bar of liquid that fills up the more cards you play and eventually resolves itself, draining the liquid and attacking the leafs. You can resolve, for instance, an "infinity geometry points" node at the end to, after you've unlocked every other requirement from a node (say that has 3 colors), the geometry blue attacks all nodes and unlocks a deeper node all at once with a single card.
 
 I have some ideas in mind and will make the first prototype based on this:
 
 ### First prototype
+
 
 It's a card game where you "attack" a problem which is a tree that requires seals, colors, numbers and editions (hello Balatro). When you're facing a problem, you have a hand of cards which are numbers cards without colors, colors and seals. You play them out in a given order and the operations "happen".
 
@@ -64,3 +66,27 @@ When you finish a problem, you can commit it to memory so it becomes a card to b
 **Random idea:** every tree can be solved "from first principles". That is, without using memory.
 
 The fun of it, hopefully, is that fusing those cards, playing from memory and strategically commiting a node into the deck would be a set of fun decisions to make.
+
+## 2025-03-28
+
+Made the first prototype using Cancan and Carol, it was "meh", but I felt there was a hint of fun in the loop of:
+
+    look at problem > put cards on stack
+    use cards from memory > resolve the stack
+    draw more cards > use more from memory
+    solve problem
+
+So using this gameplay loop with the "puzzles" being more like **Candy Crush** in the sense that no particular decision is hard at all, and its more about *vibes.*
+
+However, **I'm missing my "Joker" mechanism from Balatro.** This is the sort of "meta" progression thing where it's not exactly the second-to-second action loop but that complements it.
+
+There is the deckbuilding aspect where you are adding more complex cards to your deck, and **loot** on defeating nodes make sense, but *for what?*
+
+### What is the progression system
+
+If we're doing simply a Balatro-clone, then our progression system could be shopping for improvements to the deck and our version of **Jokers.**
+
+Thinking about what Jokers could mean to our game is hard, because we're not about chasing high-scores but instead about **making recipes.**
+
+* **Should we reward more ingredients?** Well, that doesn't really make sense.
+* **Should we reward meta-points?** That could be an exit, and it would be the same as Candy Crush does 
