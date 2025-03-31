@@ -88,5 +88,34 @@ If we're doing simply a Balatro-clone, then our progression system could be shop
 
 Thinking about what Jokers could mean to our game is hard, because we're not about chasing high-scores but instead about **making recipes.**
 
-* **Should we reward more ingredients?** Well, that doesn't really make sense.
-* **Should we reward meta-points?** That could be an exit, and it would be the same as Candy Crush does 
+* **Should we reward more ingredients?** Well, that's already a thing when giving out cards to add to your deck and also from the memory mechanism.
+* **Should we reward meta-points?** That could be an exit, and it would be the same as Candy Crush does.
+
+## 2025-03-31
+
+**My jokers are functions.**
+
+I came to this realization thinking on my starting theme of a math game where you're solving problems. The idea of a function here is something that takes an input and gives out outputs. These can be
+
+    *Blank 2* -> *Green 2*
+    *Green X* -> *Blue X*
+
+This way, by stacking the functions in a particular order, we can transform Blank 2s into Blue 2s, and stacking it the opposite way we can have Greens become Blues and Blanks become Greens after that.
+
+This adds another layer to the stack mechanic and could be expanded to create more complex functions and a "rarity" system:
+
+1. Common functions already come pre-filled with both input and output.
+1. Uncommon functions have either the input or output filled while letting you decide on the input by dragging a card from hand onto it.
+1. Rare functions that take functions as inputs and outputs another function (example take in our sample function of *Blank 2* -> *Green 2*) and make it spit out two *Green 2* instead.
+
+Those would be some ideas, obviously tweaked by playtesting and apparent power.
+
+Maybe for our third example we could, instead, think of those functions that modify existing functions as "planets/editions" on functions. You can enhance one of your functions with this doubling property or other advanced outputs.
+
+Having to use a card from hand to make a function work could be seen as a "cost" since you need to commit a card to it, and those functions would be useful when doing deckbuilding, as you can turn more "plentiful" resources in your deck to create more scarce ingredients.
+
+I don't know where to place them in my UI yet.
+
+### The shop phase
+
+I've been struggling to think of an "out-of-loop" shopping phase, which gives you the ability to "cool down" and plan for the next encounter. I think it's probably the way to go
